@@ -1,0 +1,332 @@
+/* Paleta de cores */
+:root {
+  --primary-color: #6B58D6;   /* Azul mais claro e sofisticado */
+  --primary-dark: #7e69f0;    /* Azul mais escuro e elegante para hover */
+  --secondary-color: #50E3C2; /* Verde suave */
+  --success-color: #50E3C2;   /* Amarelo suave para sucesso */
+  --error-color: #f23f87;     /* Vermelho suave para erro */
+  --light-bg: #F1F1F1;        /* Fundo claro */
+  --dark-bg: #222222;         /* Cor de fundo escuro */
+  --text-dark: #222222;       /* Texto escuro */
+  --text-light: #727272;      /* Texto claro */
+  --white: #FFFFFF;           /* Cor branca */
+  --shadow-light: rgba(0, 0, 0, 0.1); /* Sombras claras */
+  --shadow-dark: rgba(0, 0, 0, 0.3);  /* Sombras escuras */
+}
+
+/* Resetando estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilização do body */
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--light-bg);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+  padding-top: 70px;
+}
+
+/* Containers */
+/* Containers */
+.containers {
+  background: var(--white);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px var(--shadow-light);
+  max-width: 1200px;
+  margin: 30px auto;
+}
+/* Estilização do header */
+header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 20px 0;
+  text-align: center;
+  border-bottom: 4px solid var(--primary-dark);
+}
+header h1 {
+  font-size: 32px;
+  margin: 0;
+}
+header p {
+  font-size: 18px;
+  margin: 10px 0 0;
+}
+
+/* Estilo principal do conteúdo */
+main {
+  padding: 30px;
+}
+
+/* Estilos das seções */
+section {
+  margin-bottom: 50px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+/* Estilos para os campos de entrada */
+.form-control {
+  border-radius: 5px;
+  border: 1px solid #ddd; /* Borda suave */
+  padding: 10px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+  background-color: #f5f4f4;
+}
+
+.form-control:focus {
+  border-color: var(--primary-dark);
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.5); /* Sombra de foco */
+  outline: none; /* Remove outline */
+}
+
+
+/* Botão principal */
+.btn-success {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  font-weight: 500;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  width: 100%; /* Faz o botão ocupar toda a largura do formulário */
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.btn-success:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  transform: translateY(-3px); /* Efeito de "levitação" */
+}
+
+/* Mensagem de sucesso (CSS copiado) */
+/* Mensagem de erro ou sucesso */
+/* Estilo para a mensagem de sucesso */
+#msg {
+  padding: 12px;
+  background-color: var(--success-color);
+  color: var(--white);
+  border-radius: 8px;
+  display: none; /* Esconde inicialmente */
+  text-align: center;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Mensagem de erro também pode ser estilizada aqui, se necessário */
+#msg.error {
+  background-color: var(--error-color);
+  color: var(--white);
+}
+
+
+.copiado-msg {
+  display: none;
+  padding: 10px;
+  background-color: var(--success-color);
+  border: 1px solid #c3e6cb;
+  color: var(--white);
+  border-radius: 5px;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* Caixa de informação */
+.box {
+  background-color: var(--white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--shadow-light);
+  margin-top: 20px;
+}
+
+/* Ícone de cópia */
+.copy-icon {
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+/* Layout Flex */
+.flex {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap; /* Adicionado para quebrar linhas em telas pequenas */
+}
+
+/* Coluna flexível */
+.col-half {
+  flex: 1;
+  min-width: 300px;
+}
+
+
+/* Estilos para os formulários */
+.form-control,
+.btn {
+  margin-bottom:  15px;
+}
+/* Estilos para o formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+textarea {
+  max-width: 100% !important;
+  resize: vertical;
+}
+/* Estilização do footer */
+/* Rodapé */
+footer {
+  background-color: #343a40;
+  color: #fff;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+footer a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+footer .container {
+  max-width: 1200px;
+}
+
+/* Estilos para a seção "Sobre a Ferramenta" */
+article.box {
+  background-color: var(--white);
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px var(--shadow-light);
+  margin-top: 20px;
+}
+
+article.box h4 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+}
+
+article.box p {
+  font-size: 1rem;
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+article.box h5 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+article.box ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+article.box ul li {
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+article.box ul li b {
+  color: var(--text-dark);
+}
+
+article.box nav ul {
+  list-style-type: decimal;
+  margin-left: 20px;
+}
+
+article.box nav ul li {
+  font-size: 1rem;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+article.box nav ul li b {
+  color: var(--primary-dark);
+}
+/* Estilo para o FAQ Accordion */
+.accordion .accordion-button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  box-shadow: var(--shadow-light);
+  font-weight: bold;
+}
+
+.accordion .accordion-button:hover {
+  background-color: var(--primary-dark);
+  color: var(--white);
+}
+
+.accordion .accordion-button:not(.collapsed) {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.accordion .accordion-collapse {
+  background-color: var(--light-bg);
+  border-top: 1px solid var(--primary-color);
+  box-shadow: var(--shadow-light);
+}
+
+.accordion .accordion-body {
+  color: var(--text-light);
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  section {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .btn-success {
+    font-size: 1rem;
+    padding: 10px;
+  }
+
+  .form-control {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+}
